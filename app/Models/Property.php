@@ -1,10 +1,10 @@
 <?php
 
-namespace Imoveis;
+namespace Imoveis\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
-class Cidade extends Model
+class Property extends Model
 {
     //
 }
