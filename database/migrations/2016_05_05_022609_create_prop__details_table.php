@@ -12,7 +12,7 @@ class CreatePropDetailsTable extends Migration
      */
     public function up()
     {
-        Schema::create('prop__details', function (Blueprint $table) {
+        Schema::create('prop_details', function (Blueprint $table) {
             $table->increments('id');
             $table->string('prop_detail');
 
