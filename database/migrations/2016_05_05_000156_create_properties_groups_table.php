@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateDetalhesImoveisTable extends Migration {
+class CreatePropertiesGroupsTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,10 +12,10 @@ class CreateDetalhesImoveisTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('detalhes_imoveis', function(Blueprint $table)
+		Schema::create('properties_groups', function(Blueprint $table)
 		{
-			$table->string('UUID_detalhes', 36)->primary();
-			$table->string('Beneficios_Imovel', 45);
+			$table->string('UUID_Group_Property', 36)->primary();
+			$table->string('Group_Property', 45);
 		});
 	}
 
@@ -27,7 +27,7 @@ class CreateDetalhesImoveisTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('detalhes_imoveis');
+		Schema::drop('properties_groups');
 	}
 
 }

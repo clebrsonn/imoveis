@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateStatusImoveisTable extends Migration {
+class CreateStatesTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,10 +12,10 @@ class CreateStatusImoveisTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('status_imoveis', function(Blueprint $table)
+		Schema::create('states', function(Blueprint $table)
 		{
-			$table->string('uuid_Status_Imovel', 36)->primary();
-			$table->string('Status_Imovel', 45);
+			$table->string('State', 45);
+			$table->string('Shorten_State', 2)->unique('Shorten_State_UNIQUE');
 		});
 	}
 
@@ -27,7 +27,7 @@ class CreateStatusImoveisTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('status_imoveis');
+		Schema::drop('states');
 	}
 
 }

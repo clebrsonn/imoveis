@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateTipoImoveisTable extends Migration {
+class CreatePropertiesTypesTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,10 +12,10 @@ class CreateTipoImoveisTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('tipo_imoveis', function(Blueprint $table)
+		Schema::create('properties_types', function(Blueprint $table)
 		{
-			$table->string('uuId_Tipo_Imovel', 36)->primary();
-			$table->string('Tipo_Imovel', 45)->unique('Tipo_Imovel_UNIQUE');
+			$table->string('UUID_Type_Property', 36)->primary();
+			$table->string('Type_Property', 45)->unique('Type_Property_UNIQUE');
 		});
 	}
 
@@ -27,7 +27,7 @@ class CreateTipoImoveisTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('tipo_imoveis');
+		Schema::drop('properties_types');
 	}
 
 }

@@ -3,7 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 
-class CreateEstadosTable extends Migration {
+class CreateDealTypesTable extends Migration {
 
 	/**
 	 * Run the migrations.
@@ -12,10 +12,10 @@ class CreateEstadosTable extends Migration {
 	 */
 	public function up()
 	{
-		Schema::create('estados', function(Blueprint $table)
+		Schema::create('deal_types', function(Blueprint $table)
 		{
-			$table->string('Nome_Estados', 45);
-			$table->string('Sigla_Estados', 2)->unique('Sigla_Estados_UNIQUE');
+			$table->string('UUID_Deal_Type', 36)->primary();
+			$table->string('Deal_Type', 45);
 		});
 	}
 
@@ -27,7 +27,7 @@ class CreateEstadosTable extends Migration {
 	 */
 	public function down()
 	{
-		Schema::drop('estados');
+		Schema::drop('deal_types');
 	}
 
 }
