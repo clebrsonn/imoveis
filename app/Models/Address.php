@@ -6,7 +6,12 @@ use Illuminate\Database\Eloquent\Model;
 
 class Address extends Model
 {
-    public $timestamps = false;
+ 
+    protected $table = 'addresses';
 
+    public $timestamps = false;
+ 
+    protected $fillable = ['CEP', 'street', 'district'];
+    
 
 }
