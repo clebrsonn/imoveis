@@ -17,6 +17,9 @@ class CreateAddressesTable extends Migration
             $table->string('CEP', 8);
             $table->string('Street');
             $table->string('District');
+            
+            //foreign key
+            $table->string('city_id');
         });
     }
 
