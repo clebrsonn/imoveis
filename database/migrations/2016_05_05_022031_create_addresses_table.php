@@ -19,7 +19,7 @@ class CreateAddressesTable extends Migration
             $table->string('District');
             
             //foreign key
-            $table->string('city_id');
+            $table->integer('city_id')->unsigned();
         });
     }
 
