@@ -10,6 +10,12 @@ class City extends Model
     public $timestamps = false;
     protected $fillable = ['city_name'];
     
+    public function state(){
+        return $this->belongsTo(State::class);
+    }
     
+    public function adressess(){
+        return $this->hasMany(Adress::class);
+    }
 
 }
