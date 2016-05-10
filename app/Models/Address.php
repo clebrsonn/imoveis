@@ -13,5 +13,12 @@ class Address extends Model
  
     protected $fillable = ['CEP', 'street', 'district'];
     
+    public function city(){
+        return $this->belongsTo(City::class);
+    }
+
+    public function properties(){
+        return $this->hasMany(Property::class);
+    }
 
 }
