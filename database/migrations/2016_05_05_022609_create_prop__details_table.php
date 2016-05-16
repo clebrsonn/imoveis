@@ -27,6 +27,6 @@ class CreatePropDetailsTable extends Migration
      */
     public function down()
     {
-        Schema::drop('prop__details');
+        Schema::drop('prop_details');
     }
 }

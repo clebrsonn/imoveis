@@ -17,9 +17,11 @@ class CreateAddressesTable extends Migration
             $table->string('CEP', 8);
             $table->string('Street');
             $table->string('District');
-            
+
             //foreign key
-            $table->integer('city_id')->unsigned();
+//            $table->integer('city_id')->unsigned();
+            //OR
+            $table->unsignedInteger('city_id');
         });
     }
 

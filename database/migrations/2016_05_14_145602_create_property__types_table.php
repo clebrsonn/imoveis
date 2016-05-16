@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class FkTables extends Migration
+class CreatePropertyTypesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,16 +12,10 @@ class FkTables extends Migration
      */
     public function up()
     {
-        Schema::table('cities', function($table){
-
-            $table->foreign('state_id')->references('id')->on('states');
+        Schema::create('property_types', function (Blueprint $table) {
+            $table->increments('id');
+            $table->timestamps();
         });
-
-        Schema::table('adresses', function($table){
-
-            $table->foreign('city_id')->references('id')->on('cities');
-        });
-
     }
 
     /**
@@ -31,6 +25,6 @@ class FkTables extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('property_types');
     }
 }

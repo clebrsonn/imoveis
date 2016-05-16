@@ -16,7 +16,7 @@ class CreateCitiesTable extends Migration
             $table->increments('id');
             $table->string('city_name');
             //foreign keys
-            $table->integer('state_id')->unsigned();
+            $table->unsignedInteger('state_id');
         });
     }
 
