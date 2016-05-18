@@ -40,6 +40,14 @@ class AddForeignKeysToPropertiesTable extends Migration
             $table->foreign('property_id')->references('id')->on('properties');
 
         });
+
+        Schema::table('property_has_benefit', function (Blueprint $table) {
+            $table->foreign('benefit_id')->references('id')->on('benefits');
+            $table->foreign('property_id')->references('id')->on('properties');
+
+        });
+
+
     }
 
 

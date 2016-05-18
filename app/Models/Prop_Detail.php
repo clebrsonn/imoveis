@@ -14,7 +14,7 @@ class Prop_Detail extends Model
 
     public function properties()
     {
-        return $this->belongsToMany(Property::class,'property_has_detail', 'property_id', 'detail_id');
+        return $this->belongsToMany(Property::class,'property_has_detail', 'detail_id', 'property_id');
     }
 
 }
