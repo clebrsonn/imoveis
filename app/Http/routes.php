@@ -22,3 +22,17 @@ Route::get('/home', 'HomeController@index');
 Route::auth();
 
 Route::get('/home', 'HomeController@index');
+
+
+Route::group(['prefix' => ''], function () {
+
+
+});
+
+
+Route::group(['midleware' => ['web']], function () {
+
+
+    Route::resource('address','AddressController');
+
+});
