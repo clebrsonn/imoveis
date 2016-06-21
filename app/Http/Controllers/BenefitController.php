@@ -25,7 +25,7 @@ class BenefitController extends Controller
      */
     public function create()
     {
-        //
+                return view('address.new');
     }
 
     /**
@@ -47,7 +47,7 @@ class BenefitController extends Controller
      */
     public function show($id)
     {
-        //
+        return view('address.show', ['address' => Address::findOrFail($id)]);
     }
 
     /**
